@@ -1,0 +1,27 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="StudentRegistrationController"
+          alignment="TOP_LEFT" hgap="10" vgap="10">
+    <padding>
+        <Insets top="30" left="25" bottom="25" right="25"/>
+    </padding>
+    <!-- Labels and Text Fields -->
+    <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="firstName" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Year of Birth:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="yob" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Temporary Password:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="tempPassword" GridPane.columnIndex="1" GridPane.rowIndex="3" editable="false"/>
+    <Label fx:id="messageLabel" text="" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.rowSpan="1"/>
+    <HBox spacing="10" alignment="BOTTOM_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2"
+          GridPane.rowSpan="1">
+        <Button text="Register" onAction="#registerButtonClicked"/>
+        <Button text="Exit" onAction="#exitButtonClicked"/>
+    </HBox>
+</GridPane>
